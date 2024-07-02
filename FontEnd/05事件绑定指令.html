@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://unpkg.com/vue@3"></script>
+</head>
+<body>
+<div id="app">
+    <h3>count的值为{{count}}</h3>
+    <button v-on:click="addCount">+1</button>
+    <button @click="count-=1">-1</button>
+</div>
+
+<script>
+    const vm = {
+        data: function () {
+            return {
+                count: 0,
+            }
+        },
+
+        methods:{
+            addCount(){
+                this.count += 1;
+            },
+        }
+    }
+
+    const app = Vue.createApp(vm)
+    app.mount('#app')
+
+
+</script>
+
+
+</body>
+</html>

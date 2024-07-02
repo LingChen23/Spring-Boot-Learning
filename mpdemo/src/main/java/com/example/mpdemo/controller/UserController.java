@@ -38,7 +38,6 @@ public class UserController {
         return userMapper.selectList(queryWrapper);
     }
 
-
     //分页查询
     @GetMapping("/user/findByPage")
     public IPage findByPage(){
@@ -48,7 +47,6 @@ public class UserController {
 
         return iPage;
     }
-
 
     @PostMapping("/user")
     public String save(User user){
@@ -61,6 +59,5 @@ public class UserController {
             return "插入失败";
         }
     }
-
 
 }

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--  1.导入vue脚本文件 -->
+    <script src="https://unpkg.com/vue@3"></script>
+</head>
+<body>
+
+<!--  2.声明要被vue所控制的dom区域 -->
+<div id="app">
+    {{ message }}
+</div>
+
+<!--  3.创建vue的局域对象-->
+<script>
+    const hello = {
+        //指定数据源，即MVM中的Model
+        data: function () {
+            return{
+                message: 'Hello Vue...'
+            }
+        }
+    }
+
+    const app = Vue.createApp(hello)
+    app.mount('#app')
+</script>
+</body>
+</html>

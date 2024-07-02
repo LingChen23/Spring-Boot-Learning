@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://unpkg.com/vue@3"></script>
+</head>
+<body>
+<div id="app">
+    <p v-if="num > 0.5">随机数 > 0.5</p>
+    <p v-else>随机数 <= 0.5</p>
+    <hr/>
+    <p v-if="type === 'A'">优秀</p>
+    <p v-else-if="type === 'B'">良好</p>
+    <p v-else-if="type === 'C'">一般</p>
+    <p v-else>差</p>
+
+    <div v-show="a">
+        测试
+    </div>
+
+    <button @click="toggleA">点击</button>
+</div>
+<script>
+    const vm = {
+        data: function () {
+            return {
+                num: Math.random(), // 生成1以内的随机数
+                type: 'A', // 示例类型
+                a: true // 初始值为 true
+            }
+        },
+        methods: {
+            toggleA() {
+                this.a = !this.a;
+            }
+        }
+    }
+
+    const app = Vue.createApp(vm)
+    app.mount('#app')
+</script>
+</body>
+</html>
