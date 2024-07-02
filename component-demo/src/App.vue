@@ -8,7 +8,9 @@
 <script>
 import Movie from "@/components/Movie.vue";
 import Hello from "@/components/Hello.vue";
+
 // Movie.name
+
 
 export default {
     name: 'App',
@@ -21,7 +23,15 @@ export default {
             ]
         }
     },
-    components: {
+    mounted:function(){
+      console.log("App被挂载完毕")
+    },
+  created:function(){
+    // axios.get("http://localhost:8088/user/findAll").then(function (response) {
+    //   console.log(response);
+    // })
+  },
+  components: {
         Movie,
         Hello
     }

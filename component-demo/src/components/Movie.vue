@@ -16,7 +16,9 @@ export default {
 
         }
     },
-
+    created:function(){
+        console.log("Movie组件被创建了")
+    },
     methods:{
         fun(){
             alert("收藏成功")
