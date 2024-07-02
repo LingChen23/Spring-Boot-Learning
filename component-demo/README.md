@@ -1,4 +1,4 @@
-# hello
+# component-demo
 
 ## Project setup
 ```
