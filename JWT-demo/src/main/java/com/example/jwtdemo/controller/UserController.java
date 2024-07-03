@@ -3,9 +3,9 @@ package com.example.jwtdemo.controller;
 
 import com.example.jwtdemo.entity.User;
 import com.example.jwtdemo.utils.JwtUtils;
+import com.example.jwtdemo.utils.Result;
 import org.springframework.web.bind.annotation.*;
 
-import javax.xml.transform.Result;
 
 @RequestMapping("/user")
 @CrossOrigin
